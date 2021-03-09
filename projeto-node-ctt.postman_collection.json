@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "a38fbd9b-cc60-4422-b4fb-6dd6439b6f3b",
+		"name": "projeto-node-ctt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "logs",
+			"item": [
+				{
+					"name": "/v1/logs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/v1/logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"v1",
+								"logs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/vi/logs",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"servico\": \"/logs\",\r\n    \"evento\": \"GET\",\r\n    \"data\": {\r\n        \"carro\": \"Gol\",\r\n        \"marca\": \"Volkswagen\",\r\n        \"ano\": 2020\r\n    }\r\n}\r\n\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:3003/v1/logs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"v1",
+								"logs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carros",
+			"item": [
+				{
+					"name": "/vi/carros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/v1/carros/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"carros",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/vi/carros",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Uno\",\r\n    \"marca\": \"Fiat\",\r\n    \"tipo\": \"Hatch\",\r\n    \"placa\": \"TTT-2537\",\r\n    \"cor\": \"Branco\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/carros",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"carros"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "requisicao-normal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/qualquer-coisa",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"qualquer-coisa"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
